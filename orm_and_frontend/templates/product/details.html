@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+</head>
+<body>
+    <div class="card">
+        <div class="card-items">
+           <!-- <img src="{% static 'images/shirt.webp' %}" alt="Broken"> -->
+           <img src="http://127.0.0.1:8000/product/media/{{product.image}}" alt="Broken">
+           <div class="card-text">
+              <p>{{product.name|upper}}</p>
+              <p>{{product.price}}</p>
+              <p>{{product.rating}}</p>
+              <button id="add_to_cart_btn"><a href="">Add to Cart</a></button>
+              <button id="view_more_btn"><a href="">Buy Now</a></button>
+           </div>
+        </div>
+     </div>
+</body>
+</html>
